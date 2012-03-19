@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for i in `find . -iname '.??*' -maxdepth 1 -type f`; do
+for i in `find . -maxdepth 1 -iname '.??*' -type f`; do
   b=`basename $i`
   rm -rf $HOME/$b
   ln -sf $PWD/$b $HOME
