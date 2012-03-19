@@ -1,0 +1,6 @@
+defmonitor on
+defscrollback 1000
+startup_message off
+term $TERM
+#hardstatus alwayslastline "%{bk} %{M}[%n %t] %{C} %W %=%C "
+caption always "%{Yk}(%H) | %{Ck}%-Lw%50>%{Mk}%n%f* %t%{-}%+Lw%<%{- Wk} %{Yk}| %=%C"
