@@ -1,6 +1,8 @@
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-. /usr/share/git-core/git-completion.bash
+if [ -e /usr/share/git-core/git-completion.bash ]; then
+	. /usr/share/git-core/git-completion.bash
+fi
 
 GITPS1SHOWDIRTYSTATE=true
 
@@ -13,4 +15,7 @@ alias ls='ls -G'
 green="\[\033[01;32m\]"
 red="\[\033[01;33m\]"
 reg="\[\033[0m\]"
-export PS1="$green\w:$red\$(__git_ps1)$green$ $reg"
+export PS1="\h:$green\W:$red\$(__git_ps1)$green$ $reg"
+
+export RAILS_ENV=production
+
