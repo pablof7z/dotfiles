@@ -10,6 +10,10 @@ if [ -f /opt/local/etc/bashcompletion ]; then
 . /opt/local/etc/bashcompletion
 fi
 
+if [ -e /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
 alias ls='ls -G'
 
 green="\[\033[01;32m\]"
